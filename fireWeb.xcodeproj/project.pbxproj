@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2863B4A2988D14214193EBC8 /* Pods_fireWeb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69241C60849A9BF82AF946E3 /* Pods_fireWeb.framework */; };
 		F242D72323E42FA900785B30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F242D72223E42FA900785B30 /* AppDelegate.swift */; };
 		F242D72523E42FA900785B30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F242D72423E42FA900785B30 /* ViewController.swift */; };
 		F242D72823E42FA900785B30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F242D72623E42FA900785B30 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		69241C60849A9BF82AF946E3 /* Pods_fireWeb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fireWeb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97202B54E4A1FA36321E01E0 /* Pods-fireWeb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fireWeb.debug.xcconfig"; path = "Target Support Files/Pods-fireWeb/Pods-fireWeb.debug.xcconfig"; sourceTree = "<group>"; };
+		CA6C45D4CD9AADC2A2EA602E /* Pods-fireWeb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fireWeb.release.xcconfig"; path = "Target Support Files/Pods-fireWeb/Pods-fireWeb.release.xcconfig"; sourceTree = "<group>"; };
 		F242D71F23E42FA900785B30 /* fireWeb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fireWeb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F242D72223E42FA900785B30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F242D72423E42FA900785B30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2863B4A2988D14214193EBC8 /* Pods_fireWeb.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		080B3C7351386095631DDB08 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				97202B54E4A1FA36321E01E0 /* Pods-fireWeb.debug.xcconfig */,
+				CA6C45D4CD9AADC2A2EA602E /* Pods-fireWeb.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7188B79B0A3BC3356BAA1D0A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				69241C60849A9BF82AF946E3 /* Pods_fireWeb.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F242D71623E42FA900785B30 = {
 			isa = PBXGroup;
 			children = (
 				F242D72123E42FA900785B30 /* fireWeb */,
 				F242D72023E42FA900785B30 /* Products */,
+				080B3C7351386095631DDB08 /* Pods */,
+				7188B79B0A3BC3356BAA1D0A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +96,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F242D73123E42FAB00785B30 /* Build configuration list for PBXNativeTarget "fireWeb" */;
 			buildPhases = (
+				A0719BC66CA8316F800E73DB /* [CP] Check Pods Manifest.lock */,
 				F242D71B23E42FA900785B30 /* Sources */,
 				F242D71C23E42FA900785B30 /* Frameworks */,
 				F242D71D23E42FA900785B30 /* Resources */,
+				81A4289717BA1B753454EAF6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		81A4289717BA1B753454EAF6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-fireWeb/Pods-fireWeb-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-fireWeb/Pods-fireWeb-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-fireWeb/Pods-fireWeb-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0719BC66CA8316F800E73DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-fireWeb-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F242D71B23E42FA900785B30 /* Sources */ = {
@@ -280,6 +349,7 @@
 		};
 		F242D73223E42FAB00785B30 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97202B54E4A1FA36321E01E0 /* Pods-fireWeb.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +367,7 @@
 		};
 		F242D73323E42FAB00785B30 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA6C45D4CD9AADC2A2EA602E /* Pods-fireWeb.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
