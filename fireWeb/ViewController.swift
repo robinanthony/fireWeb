@@ -13,7 +13,8 @@ import SwiftyJSON
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableViewMonuments: UITableView!
     
-    var categorie = [String]()
+    var monumentsTitre = [String]()
+    var monumentsDescription = [String]()
     
     var data = JSON()
     
@@ -32,7 +33,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             if reponse.result.isSuccess {
                 let contenuJSON : JSON = JSON(reponse.result.value!)
                 self.data = contenuJSON
-                self.categorie = self.lesTitres(self.data)
+                self.majMonuments(self.data)
                 self.tableViewMonuments.reloadData()
                 print("Affichage réussie ! ")
                 // print(contenuJSON)
@@ -43,26 +44,27 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return categorie.count
+        return monumentsTitre.count
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cellule = tableView.dequeueReusableCell(withIdentifier: "uneCellule", for: indexPath)
         
-        cellule.textLabel?.text = categorie[indexPath.row]
+        cellule.textLabel?.text = monumentsTitre[indexPath.row]
+        cellule.detailTextLabel?.text = monumentsDescription[indexPath.row]
         return cellule
     }
     
-    private func lesTitres(_ data : JSON) -> [String] {
-        
-        var titre = [String]()
-        
-        for elt in data["categories"].arrayValue {
-            titre.append(elt["titre"].stringValue)
+    private func majMonuments(_ data : JSON){
+        for cat in data["categories"].arrayValue {
+            for monuments in cat["monuments"].arrayValue {
+//                titre.append(monuments["titre"].stringValue)
+//                print(monuments["titre"])
+            self.monumentsTitre.append(monuments["titre"].stringValue)
+            self.monumentsDescription.append(monuments["description"].stringValue)
+            }
         }
-        return titre
     }
-    
 }
 
