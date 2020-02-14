@@ -7,5 +7,6 @@ target 'fireWeb' do
 
   # Pods for fireWeb
 	pod 'Alamofire'
+  pod 'SwiftyJSON'
   
 end

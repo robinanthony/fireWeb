@@ -54,7 +54,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="MSy-TQ-TMd" id="LRY-QQ-tu8"/>
+                        <outlet property="tableViewMonuments" destination="MSy-TQ-TMd" id="Qxh-ia-GdF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
